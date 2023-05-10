@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 @Table(name = "tb_game")
 public class Game implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -29,12 +29,12 @@ public class Game implements Serializable {
 	private String shortDescription;
 	@Column(columnDefinition = "text")
 	private String longDescription;
-	
+
 	public Game() {
 	}
 
-	public Game(Long id, String title, Integer year, String genre, String platforms, 
-			Double score, String imgUrl, String shortDescription, String longDescription) {
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
+			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
